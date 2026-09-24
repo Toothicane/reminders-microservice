@@ -45,7 +45,7 @@ class Reminder
     #[ORM\PrePersist]
     public function onPrePersist(): void
     {
-        $now = new \DateTimeImmutable();
+        $now = $this->currentTimestamp();
         $this->createdAt = $now;
         $this->updatedAt = $now;
     }
@@ -53,7 +53,7 @@ class Reminder
     #[ORM\PreUpdate]
     public function onPreUpdate(): void
     {
-        $this->updatedAt = new \DateTimeImmutable();
+        $this->updatedAt = $this->currentTimestamp();
     }
 
     public function getId(): string
@@ -104,7 +104,7 @@ class Reminder
 
     public function setDueAt(?\DateTimeImmutable $dueAt): self
     {
-        $this->dueAt = $dueAt;
+        $this->dueAt = $dueAt === null ? null : $this->normalizeTimestamp($dueAt);
 
         return $this;
     }
@@ -129,5 +129,19 @@ class Reminder
     public function getUpdatedAt(): \DateTimeImmutable
     {
         return $this->updatedAt;
+    }
+
+    private function currentTimestamp(): \DateTimeImmutable
+    {
+        return $this->normalizeTimestamp(new \DateTimeImmutable());
+    }
+
+    private function normalizeTimestamp(\DateTimeImmutable $dateTime): \DateTimeImmutable
+    {
+        return $dateTime->setTime(
+            (int) $dateTime->format('H'),
+            (int) $dateTime->format('i'),
+            (int) $dateTime->format('s'),
+        );
     }
 }
