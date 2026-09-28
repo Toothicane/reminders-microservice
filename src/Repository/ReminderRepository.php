@@ -7,6 +7,7 @@ use App\Enum\ReminderStatus;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
+/** @extends ServiceEntityRepository<Reminder> */
 class ReminderRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
@@ -36,7 +37,7 @@ class ReminderRepository extends ServiceEntityRepository
             ->addOrderBy('CASE WHEN reminder.dueAt IS NULL THEN 1 ELSE 0 END', 'ASC')
             ->addOrderBy('reminder.dueAt', 'ASC');
 
-        if ($status !== null) {
+        if (null !== $status) {
             $queryBuilder
                 ->andWhere('reminder.status = :status')
                 ->setParameter('status', $status);

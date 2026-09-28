@@ -163,7 +163,7 @@ final class ReminderRepositoryTest extends KernelTestCase
         $this->repository->save($pastDated);
         $this->repository->save($undated2, true);
         $this->entityManager->clear();
-        
+
         $result = $this->repository->findAllByUserId('user-1');
 
         self::assertCount(4, $result);

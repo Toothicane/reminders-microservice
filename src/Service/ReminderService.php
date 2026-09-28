@@ -32,7 +32,7 @@ final class ReminderService
     {
         $reminder = $this->reminderRepository->findOneByIdAndUserId($id, $userId);
 
-        if ($reminder === null) {
+        if (null === $reminder) {
             throw new ReminderNotFoundException($id);
         }
 
@@ -55,11 +55,11 @@ final class ReminderService
         $reminder = $this->getReminder($id, $userId);
         $reminder->setTitle($request->title);
 
-        if ($request->notes !== null) {
+        if (null !== $request->notes) {
             $reminder->setNotes($request->notes);
         }
 
-        if ($request->dueAt !== null) {
+        if (null !== $request->dueAt) {
             $reminder->setDueAt($request->dueAt);
         }
 

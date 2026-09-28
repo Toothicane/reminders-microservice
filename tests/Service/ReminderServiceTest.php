@@ -40,7 +40,7 @@ final class ReminderServiceTest extends TestCase
                         && $reminder->getTitle() === $request->title
                         && $reminder->getNotes() === $request->notes
                         && $reminder->getDueAt() == $request->dueAt
-                        && $reminder->getStatus() === ReminderStatus::ACTIVE;
+                        && ReminderStatus::ACTIVE === $reminder->getStatus();
                 }),
                 true,
             );
@@ -63,7 +63,7 @@ final class ReminderServiceTest extends TestCase
                 self::callback(function (Reminder $reminder) use (&$savedReminder): bool {
                     $savedReminder = $reminder;
 
-                    return $reminder->getNotes() === null && $reminder->getDueAt() === null;
+                    return null === $reminder->getNotes() && null === $reminder->getDueAt();
                 }),
                 true,
             );

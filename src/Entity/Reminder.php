@@ -104,7 +104,7 @@ class Reminder
 
     public function setDueAt(?\DateTimeImmutable $dueAt): self
     {
-        $this->dueAt = $dueAt === null ? null : $this->normalizeTimestamp($dueAt);
+        $this->dueAt = null === $dueAt ? null : $this->normalizeTimestamp($dueAt);
 
         return $this;
     }

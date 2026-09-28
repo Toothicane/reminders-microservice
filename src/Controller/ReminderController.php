@@ -42,7 +42,7 @@ final class ReminderController
     public function list(Request $request): JsonResponse
     {
         $status = $request->query->get('status');
-        $statusFilter = $status === null ? null : $this->parseStatus($status);
+        $statusFilter = null === $status ? null : $this->parseStatus($status);
         $reminders = $this->reminderService->listReminders($this->getUserId($request), $statusFilter);
 
         return new JsonResponse([
@@ -84,7 +84,7 @@ final class ReminderController
     {
         $userId = trim((string) $request->headers->get('X-User-Id', ''));
 
-        if ($userId === '') {
+        if ('' === $userId) {
             throw new BadRequestHttpException('Missing X-User-Id header');
         }
 

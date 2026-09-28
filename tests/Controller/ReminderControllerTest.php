@@ -7,7 +7,6 @@ use App\Enum\ReminderStatus;
 use App\Repository\ReminderRepository;
 use App\Service\ReminderService;
 use Doctrine\ORM\EntityManagerInterface;
-use PHPUnit\Framework\MockObject\MockObject;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -455,9 +454,8 @@ final class ReminderControllerTest extends WebTestCase
         self::assertIsString($body['error']['message']);
         self::assertNotSame('', $body['error']['message']);
 
-        if ($message !== null) {
+        if (null !== $message) {
             self::assertSame($message, $body['error']['message']);
         }
     }
-
 }
