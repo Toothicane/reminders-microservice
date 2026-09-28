@@ -11,12 +11,14 @@
         "symfony/dotenv": "7.4.*",
         "symfony/flex": "^2",
         "symfony/framework-bundle": "7.4.*",
+        "symfony/property-access": "7.4.*",
         "symfony/runtime": "7.4.*",
         "symfony/serializer": "7.4.*",
         "symfony/uid": "7.4.*",
         "symfony/yaml": "7.4.*"
     },
     "require-dev": {
+        "dama/doctrine-test-bundle": "^8.6",
         "doctrine/doctrine-bundle": "^2.19",
         "doctrine/doctrine-migrations-bundle": "^3.7",
         "doctrine/orm": "^3.7",

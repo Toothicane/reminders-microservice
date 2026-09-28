@@ -9,6 +9,7 @@ use Symfony\Component\HttpKernel\Event\ExceptionEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
 use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
+use Symfony\Component\Serializer\Exception\UnexpectedValueException as SerializerUnexpectedValueException;
 use Symfony\Component\Validator\Exception\ValidationFailedException;
 
 final class ExceptionListener implements EventSubscriberInterface
@@ -41,6 +42,7 @@ final class ExceptionListener implements EventSubscriberInterface
         return match (true) {
             $exception instanceof ReminderNotFoundException => [404, $exception->getMessage()],
             $exception instanceof ValidationFailedException,
+            $exception instanceof SerializerUnexpectedValueException,
             $exception instanceof UnprocessableEntityHttpException => [422, $exception->getMessage()],
             $exception instanceof BadRequestHttpException => [400, $exception->getMessage()],
             default => [500, 'Internal Server Error'],

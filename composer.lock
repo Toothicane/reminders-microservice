@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eab33f2ffb702082d4809cbe6b50f1fc",
+    "content-hash": "0e04f3c26d088623ea78f34a3fba2716",
     "packages": [
         {
             "name": "psr/cache",
@@ -2114,6 +2114,177 @@
             "time": "2026-04-10T16:19:22+00:00"
         },
         {
+            "name": "symfony/property-access",
+            "version": "v7.4.16",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/property-access.git",
+                "reference": "c3dce76a6697c6428f7d80d5cd1cf0aa5d9679f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/property-access/zipball/c3dce76a6697c6428f7d80d5cd1cf0aa5d9679f3",
+                "reference": "c3dce76a6697c6428f7d80d5cd1cf0aa5d9679f3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "symfony/property-info": "^6.4.32|~7.3.10|^7.4.4|^8.0.4"
+            },
+            "require-dev": {
+                "symfony/cache": "^6.4|^7.0|^8.0",
+                "symfony/var-exporter": "^6.4.1|^7.0.1|^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\PropertyAccess\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Provides functions to read and write from/to an object or array using a simple string notation",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "access",
+                "array",
+                "extraction",
+                "index",
+                "injection",
+                "object",
+                "property",
+                "property-path",
+                "reflection"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/property-access/tree/v7.4.16"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-07-30T12:37:26+00:00"
+        },
+        {
+            "name": "symfony/property-info",
+            "version": "v7.4.19",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/property-info.git",
+                "reference": "547d2acbe865d511809b96ab653304fd632abbaa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/property-info/zipball/547d2acbe865d511809b96ab653304fd632abbaa",
+                "reference": "547d2acbe865d511809b96ab653304fd632abbaa",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "symfony/deprecation-contracts": "^2.5|^3",
+                "symfony/string": "^6.4|^7.0|^8.0",
+                "symfony/type-info": "^7.4.7|^8.0.7"
+            },
+            "conflict": {
+                "phpdocumentor/reflection-docblock": "<5.2|>=7",
+                "phpdocumentor/type-resolver": "<1.5.1",
+                "symfony/cache": "<6.4",
+                "symfony/dependency-injection": "<6.4",
+                "symfony/serializer": "<6.4"
+            },
+            "require-dev": {
+                "phpdocumentor/reflection-docblock": "^5.2|^6.0",
+                "phpstan/phpdoc-parser": "^1.0|^2.0",
+                "symfony/cache": "^6.4|^7.0|^8.0",
+                "symfony/dependency-injection": "^6.4|^7.0|^8.0",
+                "symfony/serializer": "^6.4|^7.0|^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\PropertyInfo\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kévin Dunglas",
+                    "email": "dunglas@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Extracts information about PHP class' properties using metadata of popular sources",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "doctrine",
+                "phpdoc",
+                "property",
+                "symfony",
+                "type",
+                "validator"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/property-info/tree/v7.4.19"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-09-04T10:11:42+00:00"
+        },
+        {
             "name": "symfony/routing",
             "version": "v7.4.18",
             "source": {
@@ -2566,6 +2737,89 @@
             "time": "2026-09-11T14:46:58+00:00"
         },
         {
+            "name": "symfony/type-info",
+            "version": "v7.4.17",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/type-info.git",
+                "reference": "62d0ad6995630a4f7ea8fd270aadb3e2545c8e31"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/type-info/zipball/62d0ad6995630a4f7ea8fd270aadb3e2545c8e31",
+                "reference": "62d0ad6995630a4f7ea8fd270aadb3e2545c8e31",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.2",
+                "psr/container": "^1.1|^2.0",
+                "symfony/deprecation-contracts": "^2.5|^3"
+            },
+            "conflict": {
+                "phpstan/phpdoc-parser": "<1.30"
+            },
+            "require-dev": {
+                "phpstan/phpdoc-parser": "^1.30|^2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\TypeInfo\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mathias Arlaud",
+                    "email": "mathias.arlaud@gmail.com"
+                },
+                {
+                    "name": "Baptiste LEDUC",
+                    "email": "baptiste.leduc@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Extracts PHP types information.",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "PHPStan",
+                "phpdoc",
+                "symfony",
+                "type"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/type-info/tree/v7.4.17"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/nicolas-grekas",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2026-08-21T15:52:48+00:00"
+        },
+        {
             "name": "symfony/uid",
             "version": "v7.4.17",
             "source": {
@@ -2889,6 +3143,75 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "dama/doctrine-test-bundle",
+            "version": "v8.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dmaicher/doctrine-test-bundle.git",
+                "reference": "f7e3487643e685432f7e27c50cac64e9f8c515a4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dmaicher/doctrine-test-bundle/zipball/f7e3487643e685432f7e27c50cac64e9f8c515a4",
+                "reference": "f7e3487643e685432f7e27c50cac64e9f8c515a4",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/dbal": "^3.3 || ^4.0",
+                "doctrine/doctrine-bundle": "^2.11.0 || ^3.0",
+                "php": ">= 8.2",
+                "psr/cache": "^2.0 || ^3.0",
+                "symfony/cache": "^6.4 || ^7.3 || ^8.0",
+                "symfony/framework-bundle": "^6.4 || ^7.3 || ^8.0"
+            },
+            "conflict": {
+                "phpunit/phpunit": "<11.0"
+            },
+            "require-dev": {
+                "behat/behat": "^3.0",
+                "friendsofphp/php-cs-fixer": "^3.27",
+                "phpstan/phpstan": "^2.0",
+                "phpunit/phpunit": "^11.5.41|| ^12.3.14",
+                "symfony/dotenv": "^6.4 || ^7.3 || ^8.0",
+                "symfony/process": "^6.4 || ^7.3 || ^8.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "8.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DAMA\\DoctrineTestBundle\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Maicher",
+                    "email": "mail@dmaicher.de"
+                }
+            ],
+            "description": "Symfony bundle to isolate doctrine database tests and improve test performance",
+            "keywords": [
+                "doctrine",
+                "isolation",
+                "performance",
+                "symfony",
+                "testing",
+                "tests"
+            ],
+            "support": {
+                "issues": "https://github.com/dmaicher/doctrine-test-bundle/issues",
+                "source": "https://github.com/dmaicher/doctrine-test-bundle/tree/v8.6.0"
+            },
+            "time": "2026-01-21T07:39:44+00:00"
+        },
         {
             "name": "doctrine/collections",
             "version": "2.6.0",
